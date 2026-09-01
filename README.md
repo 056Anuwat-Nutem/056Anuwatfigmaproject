@@ -3,6 +3,7 @@
 เว็บไซต์โปรโมตและแนะนำกีตาร์ไฟฟ้าไฮเอนด์ **Fender LXR** ที่ดีไซน์ขึ้นภายใต้แนวคิด **Modern Dark & Copper Glossy Aesthetic** ผสมผสานโทนเสียงอันเป็นเอกลักษณ์ของ Fender เข้ากับสเปกสมัยใหม่ ตอบโจทย์มือกีตาร์ระดับมืออาชีพ พร้อมประสบการณ์ใช้งานระดับพรีเมียมแบบ Responsive รองรับทุกหน้าจอ
 
 🔗 **เข้าชมเว็บไซต์จริง (Live Demo):** [https://fender-lxr.vercel.app](https://fender-lxr.vercel.app)
+📂 **GitHub Repository:** [https://github.com/056Anuwat-Nutem/056Anuwatfigmaproject](https://github.com/056Anuwat-Nutem/056Anuwatfigmaproject)
 
 ---
 
