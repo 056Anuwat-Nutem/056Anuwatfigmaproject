@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fender LXR - Legendary Tone, Modern Playability</title>
+  <meta name="description"
+    content="สัมผัสประสบการณ์กีตาร์ไฟฟ้าระดับตำนาน Fender LXR ผสมผสานเสียงคลาสสิกกับดีไซน์ที่ทันสมัย">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Mitr:wght@300;400;500;600&family=Outfit:wght@300;400;600;800&family=Playball&family=Alex+Brush&display=swap"
+    rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles.css?v=1.0.1">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+
+  <!-- Background overlay details -->
+  <div class="bg-glow"></div>
+
+  <!-- Header Section -->
+  <header>
+    <div class="header-container">
+      <div class="logo" onclick="switchTab('home')" style="cursor: pointer;">
+        <span class="logo-fender">Fender</span>
+        <span class="logo-lxr">LXR</span>
+      </div>
+      <nav id="navMenu">
+        <button class="nav-btn active" data-tab="home">หน้าหลัก</button>
+        <button class="nav-btn" data-tab="history">ประวัติ</button>
+        <button class="nav-btn" data-tab="recommend">แนะนำ</button>
+        <button class="nav-btn" data-tab="compare">เปรียบเทียบ</button>
+        <button class="nav-btn" data-tab="contact">ติดต่อ</button>
+      </nav>
+      <button class="menu-toggle" id="menuToggle" aria-label="เปิดเมนู">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Persistent Hero Section -->
+  <section class="hero">
+    <div class="hero-container">
+      <div class="hero-content">
+        <h1 class="hero-title">
+          <span class="fender-text">Fender</span>
+          <span class="lxr-text">LXR</span>
+        </h1>
+        <p class="hero-subtitle">LEGENDARY TONE. MODERN PLAYABILITY.</p>
+        <p class="hero-description">
+          กีตาร์ไฟฟ้าที่ผสมผสานตำนานเสียงคลาสสิก เข้ากับดีไซน์สมัยใหม่ เล่นลื่น จับถนัดมือ ตอบโจทย์ทุกสไตล์การเล่นของคุณ
+        </p>
+      </div>
+
+      <div class="hero-guitar-wrapper">
+        <div class="guitar-glow"></div>
+        <img src="assets/hero_guitar.png" alt="Fender LXR Guitar" class="hero-guitar-img" id="heroGuitarImg">
+        <div class="play-legend-watermark">Play Your<br><span>LEGEND</span></div>
+      </div>
+    </div>
+
+    <!-- Hero Bottom Bar (Features & Color Selectors) -->
+    <div class="hero-bottom-bar">
+      <div class="features-grid">
+        <div class="feature-item">
+          <div class="feature-icon">
+            <i data-lucide="activity"></i>
+          </div>
+          <div class="feature-text">
+            <h4>CLASSIC TONE</h4>
+            <p>โทนเสียงคลาสสิกเป็นเอกลักษณ์</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">
+            <i data-lucide="music"></i>
+          </div>
+          <div class="feature-text">
+            <h4>SMOOTH PLAYABILITY</h4>
+            <p>เล่นลื่น จับสบายมือ</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">
+            <i data-lucide="shield-check"></i>
+          </div>
+          <div class="feature-text">
+            <h4>PREMIUM QUALITY</h4>
+            <p>วัสดุคุณภาพสูง ทนทาน ใช้งานได้นาน</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">
+            <i data-lucide="calendar"></i>
+          </div>
+          <div class="feature-text">
+            <h4>WARRANTY</h4>
+            <p>รับประกันสินค้า 1 ปีเต็ม</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="color-selectors">
+        <button class="color-dot active" data-color="dark-brown" style="background-color: #2b1b17;"
+          title="Dark Brown"></button>
+        <button class="color-dot" data-color="orange-copper" style="background-color: #d35400;"
+          title="Orange Copper"></button>
+        <button class="color-dot" data-color="light-orange" style="background-color: #e67e22;"
+          title="Light Orange"></button>
+        <button class="color-dot" data-color="peach" style="background-color: #f39c12;" title="Peach"></button>
+        <button class="color-dot" data-color="white" style="background-color: #ffffff;" title="White"></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Switchable Content Wrapper -->
+  <main class="content-wrapper">
+
+    <!-- 1. Home Section -->
+    <section id="tab-home" class="tab-content active">
+      <div class="section-title-wrapper">
+        <h2 class="section-title">ยินดีต้อนรับสู่โลกของ Fender LXR</h2>
+      </div>
+      <div class="home-intro-grid">
+        <div class="home-intro-card">
+          <div class="intro-card-icon">
+            <i data-lucide="sparkles"></i>
+          </div>
+          <h3>นวัตกรรมและความคลาสสิก</h3>
+          <p>
+            Fender LXR ถูกออกแบบมาเพื่อให้ผู้เล่นได้สัมผัสความรู้สึกคลาสสิกพร้อมฟังก์ชันการใช้งานที่ทันสมัย
+            ระบบเสียงปิ๊คอัพที่ได้รับการอัปเดต และคอที่เข้ารูปช่วยให้เล่นง่ายขึ้นในทุกช่วงเฟรต
+          </p>
+        </div>
+        <div class="home-intro-card">
+          <div class="intro-card-icon">
+            <i data-lucide="flame"></i>
+          </div>
+          <h3>สร้างสรรค์เสียงในแบบของคุณ</h3>
+          <p>
+            ไม่ว่าจะเป็นแนวเพลง Blues, Rock, Jazz หรือ Metal กีตาร์ตัวนี้รองรับความต้องการที่หลากหลาย
+            ด้วยสวิตช์ปรับแต่งเสียงที่แม่นยำและการตอบสนองต่อไดนามิกที่ยอดเยี่ยม
+          </p>
+        </div>
+      </div>
+
+      <!-- Guitar Models Feature Grid -->
+      <div class="home-products-section">
+        <div class="home-products-grid">
+
+          <!-- Card 1 -->
+          <div class="home-product-card">
+            <div class="home-product-image">
+              <img src="assets/guitar_sunburst_1.png" alt="Fender Stratocaster Sunburst Finish">
+              <span class="home-product-badge">ICONIC FENDER</span>
+            </div>
+            <h3 class="home-product-title">Fender Stratocaster Sunburst Finish</h3>
+            <p class="home-product-desc">
+              บอดี้ของมันถูกเกลาขึ้นมาจากไม้กระดานแผ่นสุดท้ายของโรงงานเฟอร์นิเจอร์ร้างตัวไม้ผ่านการซึมซับความร้อนและคราบน้ำมันเครื่องมานานหลายทศวรรษช่างทำกีตาร์ลึกลับจึงนำมาขัดเงาและเคลือบผิวเพื่อปลุกวิญญาณของความคลาสสิกให้ออกมาโลดแล่นอีกครั้ง
+            </p>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="home-product-card">
+            <div class="home-product-image">
+              <img src="assets/guitar_hybrid.png" alt="Fender Strat-Tele Hybrid">
+            </div>
+            <h3 class="home-product-title">Fender Strat-Tele Hybrid</h3>
+            <p class="home-product-desc">
+              กีตาร์คลาสสิกสองรุ่นโดยนำโครงสร้างบอดี้ที่เล่นง่ายและโค้งมนของStratocasterเกิดเป็นงานดีไซน์ทางเลือกใหม่ที่ดึงเสน่ห์ของยุคทองแห่งดนตรีร็อกออกมาได้อย่างน่าสนใจ
+            </p>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="home-product-card">
+            <div class="home-product-image">
+              <img src="assets/guitar_strat.png" alt="Fender Stratocaster">
+              <span class="home-product-badge">ICONIC FENDER MODEL</span>
+            </div>
+            <h3 class="home-product-title">Fender Stratocaster</h3>
+            <p class="home-product-desc">
+              ภาพนี้สื่อถึงการประกอบตัวกีตาร์ด้วยเทคนิคขั้นสูงและการเลือกใช้องค์ประกอบที่มีเอกลักษณ์เฉพาะตัวซึ่งสะท้อนถึงมรดกและศิลปะการสร้างสรรค์เครื่องดนตรีในท้องถิ่น
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Home Callout -->
+      <div class="home-callout">
+        <div class="callout-text">
+          <h3>พร้อมที่จะสร้างตำนานของคุณเองหรือยัง?</h3>
+          <p>เลือกรับชมรุ่นที่เราแนะนำ หรือศึกษาประวัติอันงดงามของ Fender LXR ได้เลย</p>
+        </div>
+        <div class="callout-actions">
+          <button class="btn btn-secondary" onclick="switchTab('recommend')">ดูรุ่นแนะนำ</button>
+          <button class="btn btn-outline" onclick="switchTab('history')">อ่านประวัติ</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. History Section -->
+    <section id="tab-history" class="tab-content">
+      <div class="section-title-wrapper">
+        <h2 class="section-title-box">ประวัติ FenderLxr</h2>
+      </div>
+
+      <div class="history-grid-top">
+        <div class="history-masterpiece-card">
+          <img src="assets/history_masterpiece.png" alt="Masterpiece Fender Sarason" class="masterpiece-img">
+          <div class="masterpiece-overlay">
+            <span class="badge">MASTERPIECE FENDER SARASON STRATOCASTER</span>
+          </div>
+        </div>
+
+        <div class="history-desc-box">
+          <h3>Masterpiece Fender Sarason Stratocaster</h3>
+          <p class="history-text">
+            เบื้องหลังเสียงอันทรงพลังและรูปลักษณ์ที่ไร้ที่ติคือการยกย่อง"งานฝีมืออันยอดเยี่ยมของช่างท้องถิ่นสระบุรี(Exceptional
+            Saraburi Craftsmanship)
+            โดยกีตาร์ตัวนี้ถูกประกอบขึ้นด้วยเทคนิคเฉพาะตัวทุกการขันน็อตการเดินระบบวงจรปิ๊คอัพSingle-coil 3
+            ตัวและการจูนสายสลักอยู่บนแผ่นป้ายทองเหลืองสลักลายแบรนด์
+            Fenderขนาดย่อมที่ถูกหมุดตรึงไว้ข้างๆเพื่อเป็นเครื่องยืนยันว่านี่คือบล็อกมรดกทางศิลปะและการสร้างสรรค์เครื่องดนตรีชิ้นเอก
+          </p>
+        </div>
+
+        <div class="history-side-images">
+          <div class="side-img-card">
+            <img src="assets/history_side_1.png" alt="Detail 1">
+          </div>
+          <div class="side-img-card">
+            <img src="assets/history_side_2.png" alt="Detail 2">
+          </div>
+        </div>
+      </div>
+
+      <!-- History Bottom Models -->
+      <div class="history-models-grid">
+        <div class="guitar-card">
+          <div class="card-image">
+            <img src="assets/guitar_sunburst_1.png" alt="Fender Stratocaster Sunburst">
+            <span class="card-badge">ICONIC FENDER</span>
+          </div>
+          <div class="card-info">
+            <h3>Fender Stratocaster Sunburst Finish</h3>
+          </div>
+        </div>
+        <div class="guitar-card">
+          <div class="card-image">
+            <img src="assets/guitar_hybrid.png" alt="Fender Strat-Tele Hybrid">
+          </div>
+          <div class="card-info">
+            <h3>Fender Strat-Tele Hybrid</h3>
+          </div>
+        </div>
+        <div class="guitar-card">
+          <div class="card-image">
+            <img src="assets/guitar_strat.png" alt="Fender Stratocaster">
+            <span class="card-badge">ICONIC FENDER MODEL</span>
+          </div>
+          <div class="card-info">
+            <h3>Fender Stratocaster</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Recommend Section -->
+    <section id="tab-recommend" class="tab-content">
+      <div class="section-title-wrapper">
+        <h2 class="section-title-box">แนะนำรุ่น FenderLxr</h2>
+      </div>
+
+      <!-- Recommend View 1: Grid Layout (As seen in Image 2) -->
+      <div class="recommend-grid">
+        <div class="recommend-card">
+          <div class="card-image">
+            <img src="assets/guitar_sunburst_1.png" alt="Fender Stratocaster Sunburst">
+            <span class="card-badge">ICONIC FENDER</span>
+          </div>
+          <div class="card-info">
+            <h3>Fender Stratocaster Sunburst Finish</h3>
+          </div>
+        </div>
+        <div class="recommend-card">
+          <div class="card-image">
+            <img src="assets/guitar_hybrid.png" alt="Fender Strat-Tele Hybrid">
+          </div>
+          <div class="card-info">
+            <h3>Fender Strat-Tele Hybrid</h3>
+          </div>
+        </div>
+        <div class="recommend-card">
+          <div class="card-image">
+            <img src="assets/guitar_strat.png" alt="Fender Stratocaster">
+            <span class="card-badge">ICONIC FENDER MODEL</span>
+          </div>
+          <div class="card-info">
+            <h3>Fender Stratocaster</h3>
+          </div>
+        </div>
+        <div class="recommend-card">
+          <div class="card-image">
+            <img src="assets/guitar_sunburst_1.png" alt="Fender Stratocaster Sunburst">
+            <span class="card-badge">ICONIC FENDER</span>
+          </div>
+          <div class="card-info">
+            <h3>Fender Stratocaster Sunburst Finish</h3>
+          </div>
+        </div>
+      </div>
+
+      <!-- Recommend View 2: Horizontal Detail Row (As seen in Image 3) -->
+      <div class="recommend-detail-section">
+        <div class="detail-row-grid">
+          <div class="detail-col">
+            <div class="detail-image-box">
+              <img src="assets/guitar_sunburst_1.png" alt="Fender Stratocaster Sunburst">
+              <span class="badge-label">ICONIC FENDER</span>
+            </div>
+            <h4>Fender Stratocaster Sunburst Finish</h4>
+            <p>
+              บอดี้ของมันถูกเกลาขึ้นมาจากไม้กระดานแผ่นสุดท้ายของโรงงานเฟอร์นิเจอร์สร้างตัวไม้ผ่านการซึมซับความร้อนและคราบน้ำมันเครื่องมานานหลายทศวรรษช่างทำกีตาร์ลึกลับจึงนำมาขัดเงาและเคลือบผิวเพื่อปลุกวิญญาณของความคลาสสิกให้ออกมาโลดแล่นอีกครั้ง
+            </p>
+          </div>
+          <div class="detail-col">
+            <div class="detail-image-box">
+              <img src="assets/guitar_hybrid.png" alt="Fender Strat-Tele Hybrid">
+            </div>
+            <h4>Fender Strat-Tele Hybrid</h4>
+            <p>
+              กีตาร์คลาสสิกสองรุ่นโยนนำโครงสร้างบอดี้ที่เล่นง่ายและโค้งมนของ Stratocaster
+              เกิดเป็นงานดีไซน์ทางเลือกใหม่ที่ดึงเสน่ห์ของยุคทองแห่งดนตรีร็อกออกมาได้อย่างน่าสนใจ
+            </p>
+          </div>
+          <div class="detail-col">
+            <div class="detail-image-box">
+              <img src="assets/guitar_strat.png" alt="Fender Stratocaster">
+              <span class="badge-label">ICONIC FENDER MODEL</span>
+            </div>
+            <h4>Fender Stratocaster</h4>
+            <p>
+              ภาพนี้สื่อถึงการประกอบตัวกีตาร์ด้วยเทคนิคขั้นสูงและการเลือกใช้องค์ประกอบที่มีเอกลักษณ์เฉพาะตัว
+              ซึ่งสะท้อนถึงมรดกและศิลปะการสร้างสรรค์เครื่องดนตรีในท้องถิ่น
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Compare Section -->
+    <section id="tab-compare" class="tab-content">
+      <div class="section-title-wrapper">
+        <h2 class="section-title-box">เปรียบเทียบรุ่น FenderLxr</h2>
+      </div>
+
+      <div class="compare-rows-container">
+        <!-- Row 1: Image Left, Text Right -->
+        <div class="compare-row">
+          <div class="compare-image">
+            <img src="assets/guitar_sunburst_1.png" alt="Fender Stratocaster Sunburst Finish">
+          </div>
+          <div class="compare-text">
+            <h3>Fender Stratocaster Sunburst Finish</h3>
+            <p>
+              ตัวนี้คือความหรูหราแบบดั้งเดิมที่ทรงคุณค่า บอดี้ทำจากไม้ Alder คัดลายไม้เป็นพิเศษ
+              เพื่อให้ลวดลายธรรมชาติของเนื้อไม้ทำหน้าที่เป็นพระเอกหลักเมื่อมองผ่านสีเคลือบแบบ Gloss Finish
+              (เคลือบเงาไฮกลอส) ส่วนที่โดดเด่นและเป็นเอกลักษณ์ที่สุดคือการพ่นสีไล่เฉดแบบ Sunburst
+              ซึ่งในภาพนี้คือการไล่เฉดแบบ 3-Tone Sunburst ที่ขอบนอกสุดจะเป็นสีน้ำตาลช็อกโกแลตเข้มจนเกือบดำ
+              ทอดเงาโอบล้อมตัวกีตาร์อย่างมีมิติ ก่อนจะค่อยๆ ส่งผ่านเนื้อสีไปยังสีน้ำตาลอิฐอบอุ่น
+              และเม็ดสว่างอย่างงดงามตรงใจกลางตัวบอดี้ด้วยสีส้มอมน้ำตาลประกายทอง ความพิเศษที่ทำให้ Stratocaster Sunburst
+              ตัวนี้แตกต่างจากรุ่นทั่วไปในท้องตลาด คือการเลือกใช้ ปิ๊กการ์ดสีดำสนิท (Black Pickguard) รวมถึงปุ่มควบคุม
+              (Knobs) และหัวครอบปิ๊กอัพสีดำทั้งหมด ซึ่งเป็นการฉีกกรอบความจำจากปิ๊กการ์ดสีขาวดั้งเดิม
+              ทำให้ภาพรวมของกีตาร์มีความลึกลับ ดุดัน ดิบเท่ แต่ยังอัดแน่นไปด้วยความพรีเมียม
+              ตัดกับชุดฮาร์ดแวร์โครเมียมเงินแวววาวรอบตัว
+            </p>
+          </div>
+        </div>
+
+        <!-- Row 2: Text Left, Image Right -->
+        <div class="compare-row alternate">
+          <div class="compare-text">
+            <h3>Fender Strat-Tele Hybrid</h3>
+            <p>
+              นี่คือ "ยมทูตชั้นเอก" แห่งวงการดีไซน์ที่หลายทุกกฎเกณฑ์เดิมๆ ของ Fender
+              โดยการนำเอาความงามจากสองมิติที่แตกต่างมารวมร่างกันได้อย่างน่าอัศจรรย์
+              ตัวบอดี้ใช้โครงสร้างความโค้งมนและส่วนเว้าคู่ (Double Cutaway) ของทรง Stratocaster
+              แต่เปลี่ยนวิธีการทำสีเป็น Matte/Satin Finish (สีน้ำตาลช็อกโกแลตผิวด้าน) ซึ่งไม่มีแสงสะท้อน
+              ผิวสัมผัสมีความเรียบเนียน โมเดิร์น และดูร่วมสมัยแบบมินิมอล
+              แต่จุดที่ทำให้ทุกคนต้องเหลียวมองคือส่วนหัวกีตาร์ (Headstock)
+              ที่ถูกตัดสลับไปใช้รูปทรงเรียวเล็กและตัดตรงอันเป็นสัญลักษณ์ของ Fender Telecaster
+              พร้อมใส่ใบแบรนด์สีทองหรูหรา ยิ่งไปกว่านั้น แผงหน้าปัดของมันยังถูกประดับด้วย
+              ปิ๊กการ์ดลายกระดองเต่าสีน้ำตาลส้ม (Brown Tortoiseshell) ผิวสัมผัสแบบแมตต์หลายชั้น
+              ลวดลายสีส้มสว่างที่ตัดสลับในเนื้อกระดองเต่าทำหน้าที่เพิ่มกลิ่นอายความวินเทจขั้นสูง
+              ทำให้กีตาร์ตัวนี้ดูเป็นงานศิลปะที่มีทั้งความโมเดิร์นและความโบราณผสมผสานกันอย่างลงตัว
+            </p>
+          </div>
+          <div class="compare-image">
+            <img src="assets/guitar_hybrid.png" alt="Fender Strat-Tele Hybrid">
+          </div>
+        </div>
+
+        <!-- Row 3: Image Left, Text Right -->
+        <div class="compare-row">
+          <div class="compare-image">
+            <img src="assets/guitar_strat.png" alt="Fender Stratocaster">
+          </div>
+          <div class="compare-text">
+            <h3>Fender Stratocaster</h3>
+            <p>
+              นี่คือ "แม่พิมพ์และรากฐานของประวัติศาสตร์ดนตรีโลก" ที่แท้จริง
+              ดีไซน์ของโมเดลมาตรฐานนี้คือสิ่งที่ถูกจดจำในฐานะภาพจำของกีตาร์ไฟฟ้าทั่วโลกมานานกว่า 70 ปี
+              โดดเด่นด้วยการออกแบบตามหลักสรีรศาสตร์ (Ergonomics) ที่อัจฉริยะด้วยบอดี้ทรงโค้งเว้าคู่ที่สมส่วน
+              พร้อมการปาดขอบและเว้าโค้งที่บอดี้ด้านหลัง (Contoured Body)
+              เพื่อให้ตัวกีตาร์สามารถแนบสนิทไปกับแผ่นอกและสีข้างของผู้เล่นได้อย่างนุ่มนวลและเป็นธรรมชาติที่สุด
+              ส่วนหัวกีตาร์เป็นทรง Stratocaster ดั้งเดิมที่มีความโค้งมนและขนาดที่สมดุลกับบอดี้
+              การจัดวางแผงควบคุมและปิ๊กการ์ดเป็นไปตามมาตรฐานโรงงานที่เน้นความสมดุล เข้าถึงง่าย
+              และใช้งานได้จริงในทุกสถานการณ์ ไม่มีส่วนเกินที่เกินจำเป็น
+            </p>
+          </div>
+        </div>
+
+        <!-- Row 4: Text Left, Image Right -->
+        <div class="compare-row alternate">
+          <div class="compare-text">
+            <h3>Fender Stratocaster Sunburst Finish</h3>
+            <p>
+              ตัวนี้คือความหรูหราแบบดั้งเดิมที่ทรงคุณค่า บอดี้ทำจากไม้ Alder คัดลายไม้เป็นพิเศษ
+              เพื่อให้ลวดลายธรรมชาติของเนื้อไม้ทำหน้าที่เป็นพระเอกหลักเมื่อมองผ่านสีเคลือบแบบ Gloss Finish
+              (เคลือบเงาไฮกลอส) ส่วนที่โดดเด่นและเป็นเอกลักษณ์ที่สุดคือการพ่นสีไล่เฉดแบบ Sunburst
+              ซึ่งในภาพนี้คือการไล่เฉดแบบ 3-Tone Sunburst ที่ขอบนอกสุดจะเป็นสีน้ำตาลช็อกโกแลตเข้มจนเกือบดำ
+              ทอดเงาโอบล้อมตัวกีตาร์อย่างมีมิติ ก่อนจะค่อยๆ ส่งผ่านเนื้อสีไปยังสีน้ำตาลอิฐอบอุ่น
+              และเม็ดสว่างอย่างงดงามตรงใจกลางตัวบอดี้ด้วยสีส้มอมน้ำตาลประกายทอง ความพิเศษที่ทำให้ Stratocaster Sunburst
+              ตัวนี้แตกต่างจากรุ่นทั่วไปในท้องตลาด คือการเลือกใช้ ปิ๊กการ์ดสีดำสนิท (Black Pickguard) รวมถึงปุ่มควบคุม
+              (Knobs) และหัวครอบปิ๊กอัพสีดำทั้งหมด ซึ่งเป็นการฉีกกรอบความจำจากปิ๊กการ์ดสีขาวดั้งเดิม
+              ทำให้ภาพรวมของกีตาร์มีความลึกลับ ดุดัน ดิบเท่ แต่ยังอัดแน่นไปด้วยความพรีเมียม
+              ตัดกับชุดฮาร์ดแวร์โครเมียมเงินแวววาวรอบตัว
+            </p>
+          </div>
+          <div class="compare-image">
+            <img src="assets/guitar_sunburst_1.png" alt="Fender Stratocaster Sunburst Finish">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Contact Section -->
+    <section id="tab-contact" class="tab-content">
+      <div class="section-title-wrapper">
+        <h2 class="section-title-box">ติดต่อเรา</h2>
+      </div>
+
+      <div class="contact-form-container">
+        <form id="contactForm">
+          <div class="form-group">
+            <label for="name">ชื่อ-นามสกุล</label>
+            <input type="text" id="name" required placeholder="กรอกชื่อและนามสกุลของคุณ">
+          </div>
+          <div class="form-group">
+            <label for="email">อีเมล</label>
+            <input type="email" id="email" required placeholder="example@email.com">
+          </div>
+          <div class="form-group">
+            <label for="message">ข้อความ</label>
+            <div class="ruled-textarea-wrapper">
+              <textarea id="message" rows="10" required placeholder="เขียนข้อความของคุณที่นี่..."></textarea>
+              <div class="lines-overlay">
+                <span></span><span></span><span></span><span></span><span></span>
+                <span></span><span></span><span></span><span></span><span></span>
+              </div>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-submit">ส่งข้อความ</button>
+        </form>
+
+        <div id="formSuccess" class="form-success-msg">
+          <i data-lucide="check-circle-2"></i>
+          ส่งข้อความสำเร็จ! เราจะติดต่อกลับหาคุณโดยเร็วที่สุด
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="footer-container">
+      <!-- Medallion Logo -->
+      <div class="footer-logo-box">
+        <img src="assets/sarason_logo.png" alt="Fender LXR Medal Logo" class="footer-medal-logo">
+      </div>
+
+      <!-- Social Icons -->
+      <div class="footer-socials">
+        <a href="#" class="social-box" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round">
+            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+          </svg>
+        </a>
+        <a href="#" class="social-box" aria-label="Line">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round">
+            <path
+              d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z">
+            </path>
+            <text x="12" y="14.2" font-size="5" font-weight="900" font-family="sans-serif" fill="currentColor"
+              text-anchor="middle">LINE</text>
+          </svg>
+        </a>
+        <a href="#" class="social-box" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+          </svg>
+        </a>
+        <a href="#" class="social-box" aria-label="YouTube">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round">
+            <path
+              d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 11.54a29 29 0 0 0 .46 5.12 2.78 2.78 0 0 0 1.95 1.96C5.12 19 12 19 12 19s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12.46a29 29 0 0 0-.46-5.04z">
+            </path>
+            <polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"></polygon>
+          </svg>
+        </a>
+      </div>
+
+      <!-- Site Map Menu -->
+      <div class="footer-menu">
+        <h4>เมนู</h4>
+        <ul>
+          <li><a href="#" onclick="event.preventDefault(); switchTab('home')">หน้าหลัก</a></li>
+          <li><a href="#" onclick="event.preventDefault(); switchTab('recommend')">แนะนำ</a></li>
+          <li><a href="#" onclick="event.preventDefault(); switchTab('history')">ประวัติ</a></li>
+          <li><a href="#" onclick="event.preventDefault(); switchTab('compare')">เปรียบเทียบ</a></li>
+          <li><a href="#" onclick="event.preventDefault(); switchTab('contact')">ติดต่อ</a></li>
+        </ul>
+      </div>
+
+      <!-- Address Info -->
+      <div class="footer-address">
+        <h4>ที่อยู่</h4>
+        <p>ที่ตั้ง: เลขที่ 2026<br>ถนนพหลโยธิน ตรรกะคราฟต์<br>ตำบลปากเพรียว อำเภอเมืองสระบุรี<br>จังหวัดสระบุรี 18000
+        </p>
+      </div>
+
+  </footer>
+
+  <!-- Back to Top Floating Button -->
+  <div class="footer-back-to-top">
+    <span>กลับด้านบน</span>
+    <button id="backToTopBtn" aria-label="Back to top">
+      <i data-lucide="arrow-up"></i>
+    </button>
+  </div>
+
+  <!-- JS -->
+  <script src="app.js?v=1.0.1"></script>
+</body>
+
+</html>
